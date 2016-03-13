@@ -1,0 +1,29 @@
+template(name='previousReview')
+	div
+		ul.nav.nav-tabs#myTabs(role="tablist")
+			li.active(role="presentation")
+				a(href="#previousReview" role="tab" aria-controls="alluser" data-toggle="tab") 查看评审
+		div.tab-content
+			div.tab-pane.active#previousReview(role="tabpanel")
+				div.review-header
+					div.col-md-6.col-xs-6.col-lg-6.text-center #{homework.title}
+					div.col-md-3.col-xs-3.col-lg-3.text-center
+						a(href="/") 返回
+				br
+				each otherReviews
+					if isTa
+						div.other-review-body
+							div.panel.panel-primary
+								div.review-sign-ta
+								div.other-review-comment
+									p #{comment}
+								div.other-review-score-ta
+									div.text-center.showscore #{score}
+					else
+						div.other-review-body
+							div.panel.panel-success
+								div.review-sign-others
+								div.other-review-comment
+									p #{comment}
+								div.other-review-score
+									div.text-center.showscore #{score}

@@ -1,0 +1,651 @@
+.grid-block,
+.main,
+.post,
+.comments li,
+.comment-form {
+  background: #fff;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background: #eee;
+  color: #666666;
+}
+
+#main {
+  position: relative;
+}
+
+.page {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #1565c0;
+  border-color: #1565c0;
+  border-radius: 0px;
+  margin-bottom: 10px;
+}
+
+
+/* line 32, ../sass/style.scss */
+
+.navbar .navbar-inner {
+  border-radius: 0px 0px 3px 3px;
+}
+
+#spinner {
+  height: 300px;
+}
+
+.post {
+  /* For modern browsers */
+  /* For IE 6/7 (trigger hasLayout) */
+  *zoom: 1;
+  position: relative;
+  opacity: 1;
+}
+
+.post:before,
+.post:after {
+  content: "";
+  display: table;
+}
+
+.post:after {
+  clear: both;
+}
+
+.post.invisible {
+  opacity: 0;
+}
+
+.post.instant {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.post.animate {
+  -webkit-transition: all 300ms 0ms;
+  -moz-transition: all 300ms 0ms ease-in;
+  -o-transition: all 300ms 0ms ease-in;
+  transition: all 300ms 0ms ease-in;
+}
+
+.post .upvote {
+  display: block;
+  margin: 7px 12px 0 0;
+  float: left;
+}
+
+.post .post-content {
+  float: left;
+}
+
+.post .post-content h3 {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+.post .post-content h3 a {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.post .post-content h3 span {
+  font-weight: normal;
+  font-size: 14px;
+  display: inline-block;
+  color: #aaaaaa;
+}
+
+.post .post-content p {
+  margin: 0;
+}
+
+.post .discuss {
+  display: block;
+  float: right;
+  margin-top: 7px;
+}
+
+.comments {
+  list-style-type: none;
+  margin: 0;
+}
+
+.comments li h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.comments li h4 .date {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.comments li h4 a {
+  font-size: 12px;
+}
+
+.comments li p:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  line-height: 20px;
+  color: #bbb;
+  white-space: nowrap;
+}
+
+.load-more {
+  display: block;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 10px;
+}
+
+.load-more:hover {
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.posts .spinner-container {
+  position: relative;
+  height: 100px;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.errors {
+  position: fixed;
+  z-index: 10000;
+  padding: 10px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+}
+
+.alert {
+  animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  width: 250px;
+  float: right;
+  clear: both;
+  margin-bottom: 5px;
+  pointer-events: auto;
+}
+
+.panel-gray {
+  border-color: #777;
+}
+
+img {
+  width: 100%;
+  height: 280px;
+}
+
+/*login style*/
+
+#login-main {
+  height: 100%;
+  background: url(/img/bg2.png) no-repeat;
+  background-size: 100% 120%;
+}
+
+.bg {
+  height: 100%;
+  background: url(/img/bg_line.png);
+  background-size: 100% 100%;
+}
+
+.bg .login-header {
+  color: #fff;
+  height: 350px;
+  padding: 10% 0 0 10%;
+}
+
+.bg .login-header .header-my {
+  font-size: 80px;
+}
+
+.bg .login-header .header-am {
+  position: relative;
+  top: -25px;
+  font-size: 20px;
+}
+
+.input-filed {
+  margin: auto;
+  height: 220px;
+  width: 300px;
+}
+
+.input-filed label {
+  color: #fff;
+}
+
+.input-filed .checkbox-control {
+  display: inline-block;
+  width: auto;
+}
+
+.input-filed .find-password {
+  float: right;
+}
+
+.input-filed .login-btn {
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.input-filed .login-btn .btn-login {
+  width: 100px;
+}
+
+/*review  */
+
+.review-header {
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.panel-unsubmit {
+  border-color: #ef6c00;
+}
+
+.btn-unsubmit {
+  background-color: #ef6c00;
+  color: #fff;
+}
+
+.review-body {
+  margin: 0 5%;
+}
+
+.review-body .panel {
+  height: 200px;
+}
+
+.review-body .panel .review-sign-unsubmit {
+  float: left;
+  width: 1%;
+  height: 200px;
+  margin-top: -1px;
+  background-color: #ef6c00;
+  border-radius: 4px 0 0 4px;
+}
+
+.review-body .panel .review-sign-primary {
+  float: left;
+  width: 1%;
+  height: 200px;
+  margin-top: -1px;
+  background-color: #337ab7;
+  border-radius: 4px 0 0 4px;
+}
+
+.review-body .panel .review-img {
+  float: left;
+  width: 19%;
+  height: 198px;
+}
+
+.review-body .panel .review-img img {
+  width: 100%;
+  height: 198px;
+}
+
+.review-body .panel .review-info {
+  padding-top: 40px;
+  font-size: 15px;
+  float: left;
+  width: 15%;
+  height: 198px;
+  background-color: #eeeeee;
+}
+
+.review-body .panel .review-comment {
+  float: left;
+  width: 50%;
+  height: 198px;
+  padding: 10px;
+  border-right: solid 1px #e0e0e0;
+}
+
+.review-body .panel .review-comment textarea {
+  height: 100%;
+  font-size: 15px;
+}
+
+.review-body .panel .review-score {
+  width: 15%;
+  height: 198px;
+  float: left;
+}
+
+.review-body .panel .review-score .score-top {
+  width: 100%;
+  height: 46px;
+  margin-bottom: 0px;
+}
+
+.review-body .panel .review-score .score-btn {
+  height: 152px;
+  background-color: #337ab7;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex: initial;
+}
+
+.review-body .panel .review-score .score-btn-unsubmit {
+  height: 152px;
+  background-color: #ef6c00;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex: initial;
+}
+
+.review-body .panel .review-score .score-btn input {
+  width: 80%;
+  border-color: #fff;
+}
+
+.review-body .panel .review-score .score-btn-unsubmit input {
+  width: 80%;
+  border-color: #fff;
+}
+
+.review-body .panel .review-score .score-top input {
+  font-size: 15px;
+  border-radius: 0 3px 0  0;
+}
+
+.other-review-body {
+  margin: 0 10%;
+}
+
+.other-review-body .panel {
+  min-height: 200px;
+  display: flex;
+  overflow: auto;
+  word-break: break-all;
+}
+
+.other-review-body .panel .review-sign-others {
+  float: left;
+  width: 1%;
+  margin-top: -1px;
+  background-color: #009688;
+  border-radius: 4px 0 0 4px;
+  flex: initial;
+}
+
+.other-review-body .panel .review-sign-ta {
+  float: left;
+  width: 1%;
+  margin-top: -1px;
+  background-color: #337ab7;
+  border-radius: 4px 0 0 4px;
+  flex: initial;
+}
+
+.other-review-body .panel .other-review-comment {
+  padding: 10px 15px;
+  float: left;
+  width: 82%;
+  min-height: 198px;
+  font-size: 20px;
+  background-color: #eeeeee;
+}
+
+.other-review-body .other-review-score {
+  float: left;
+  width: 17%;
+  background-color: #009688;
+  border-radius: 0 3px 3px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex: initial;
+}
+
+.other-review-body .other-review-score .showscore {
+  width: 100%;
+  font-size: 30px;
+  color: #fff;
+}
+
+.other-review-body .other-review-score-ta {
+  float: left;
+  width: 17%;
+  background-color: #337ab7;
+  border-radius: 0 3px 3px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex: initial;
+}
+
+.other-review-body .other-review-score-ta .showscore {
+  width: 100%;
+  font-size: 30px;
+  color: #fff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#main {
+  margin: 0px 10px 0px 10px;
+}
+
+/*hightcharts*/
+
+
+
+#myscore {
+  height: 320px;
+}
+
+#myrank {
+  height: 320px;
+}
+
+.achievements-container .well {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.achievements-container .col-md-3 {
+  padding: 5px;
+}
+
+.achievements-container .col-md-6 {
+  padding: 5px;
+}
+
+.achievements-container .panel-body {
+  padding: 0px;
+}
+
+.achievements-container .panel-body img {
+  width: 100%;
+  height: 280px;
+}
+
+.panel-content {
+  width: 100%;
+  height: 280px;
+  padding-top: 20%;
+}
+
+.panel-content p {
+  text-align: center;
+}
+
+.panel-gray {
+  border-color: #777;
+}
+
+.panel-gray > .panel-heading {
+  color: #fff;
+  background-color: #777;
+  border-color: #777;
+}
+
+.panel-gray > .panel-heading .label-default {
+  background-color: #bdbdbd;
+}
+
+.panel-success {
+  border-color: #009688;
+}
+
+.panel-success > .panel-heading {
+  color: #fff;
+  background-color: #009688;
+  border-color: #009688;
+}
+
+/*allHomeworks*/
+
+.hw-container {
+  margin: 10px 10px;
+}
+
+.hw-container .panel-footer a {
+  margin-right: 20px;
+}
+
+.hw-container .starttime {
+  margin-right: 20px;
+}
+
+.hw-container .panel-body {
+  padding-bottom: 5px;
+}
+
+.class1 {
+  text-align: center;
+}
+
+.edit-header {
+  border-bottom: solid 1px #ddd;
+  height: 42px;
+  padding-top: 20px;
+}
+
+/* student*/
+.mask {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  height: 280px;
+  position: absolute;
+  padding-right: 11px;
+}
+
+.mask .mask-inner {
+  background-color: rgba(0,0,0,0.7);
+  height: 280px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex: initial;
+}
+
+.mask .show {
+  width: 100%;
+  color: #fff;
+}

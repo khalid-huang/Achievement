@@ -1,0 +1,11 @@
+template(name="header")
+	nav.navbar.navbar-inverse
+		a.navbar-brand(href="{{pathFor 'index'}}") Achivenments
+		div.container-fluid
+			ul.nav.navbar-nav.navbar-right
+				if user.isStudent
+					li 
+						a(href="#") group #{user.profile.group}
+				li 
+					a(href="#") #{user.username}
+				+loginButtons

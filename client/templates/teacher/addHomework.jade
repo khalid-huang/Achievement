@@ -1,0 +1,28 @@
+template(name="addHomework")
+	div.panel.panel-primary
+		div.panel-body
+			div.row
+				div.col-md-12.col-md-offset-4
+					h2 发布新作业
+			div.row.col-md-offset-2
+				div.col-md-12
+					form.main.form
+						div.form-group
+							label.col-md-2.control-label(for='title') 标题: 
+							div
+								input(type='text' name='title' required)
+						div.form-group
+							label.col-md-2.control-label(for='url') 链接:
+							div
+								input(type='url' name='url' required)
+						div.form-group
+							label.col-md-2.control-label(for='startTime') 开始时间:
+							div
+								input(type='date' name='startTime' value="2016-02-23" required) 
+						div.form-group
+							label.col-md-2.control-label(for='deadline') 结束时间:
+							div
+								input(type='date' name='deadline' value="2016-02-23" required)
+						div.form-group
+							div.right
+								button.btn.btn-success.btn-lg(type="submit") 发布作业

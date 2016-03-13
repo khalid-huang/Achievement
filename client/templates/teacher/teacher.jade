@@ -1,0 +1,15 @@
+template(name="teacher")
+	p
+		a.btn.btn-success(href="{{pathFor 'addHomework'}}") 发布新作业
+	each homeworks
+		div.panel.panel-default
+			div.panel-heading
+				h4 #{title}
+			div.panel-body
+			p #{startTime}
+			p #{deadline}
+			p #{status}
+			p
+				a #{url}
+			a(href="{{pathFor 'editHomework'}}") 编辑
+			button#delete(homeworkId="{{_id}}") 删除

@@ -1,0 +1,31 @@
+template(name="home")
+	if user
+		if user.profile.isTeacher
+			each homework in homeworks
+				if homework.status
+					div.panel.panel-primary
+						div.panel-heading
+							h4 #{homework.title}
+						div.panel-body
+							p #{homework.startTime}
+							p #{homework.deadline}
+							p
+								a #{homework.url}
+							a(href="{{pathFor 'editHomework'}}") 编辑
+							a(href="{{pathFor 'deleteHomework'}}") 删除
+				else
+					div.panel.panel-default
+						div.panel-heading
+							h4 #{homework.title}
+						div.panel-body
+							p #{homework.startTime}
+							p #{homework.deadline}
+							p
+								a #{homework.url}
+							a(href="#") 编辑
+		else if user.profile.isTa
+			p haa
+		else if user.profile.isStudent
+			+highchartsHelper(chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart)
+	else
+		p no user

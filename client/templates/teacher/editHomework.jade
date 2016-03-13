@@ -1,0 +1,29 @@
+template(name="editHomework")
+	div.panel.panel-primary
+		div.panel-body
+			div.row
+				div.col-md-12.col-md-offset-4
+					h2 编辑作业
+			div.row.col-md-offset-2
+				div.col-md-12
+					form.main.form
+						div.form-group
+							label.col-md-2.control-label(for='title') 标题: 
+							div.col-md-10
+								input(type='text' name='title' value="{{title}}" required)
+						div.form-group
+							label.col-md-2.control-label(for='url') 链接:
+							div.col-md-10
+								input(type='url' name='url' value="{{url}}" required) 
+						div.form-group
+							label.col-md-2.control-label(for='startTime') 开始时间:
+							div.col-md-10
+								input(type='date' name='startTime' value="{{start}}" required)
+						div.form-group
+							label.col-md-2.control-label(for='deadline') 结束时间:
+							div.col-md-10
+								input(type='date' name='deadline' value="{{end}}" required)
+						div.form-group
+							div.right
+								button.btn.btn-success.btn-lg(type="submit") 提交修改
+								a.btn.btn-default.btn-lg(href="{{pathFor 'index'}}") 返回

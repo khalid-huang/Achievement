@@ -1,0 +1,24 @@
+template(name='studentReview')
+	div
+		ul.nav.nav-tabs(role="tablist")
+			li(role="presentation")
+				a(href="#") MyReview
+			li(role="presentation")
+				a(href="{{pathFor 'otherReview'}}") Other's
+	div.tab-content
+		div.tab-pane.active(role="tabpanel")
+			div.review-header
+				span.col-md-3.col-xs-3.col-lg-3.text-center Group: #{revieweeGroup}
+				span.col-md-6.col-xs-6.col-lg-6.text-center My Achievements
+				span.col-md-3.col-xs-3.col-lg-3.text-center
+					a(href="/") 返回
+			each MyReviews
+					div.other-review-body
+						div.panel.panel-success
+							div.review-sign-others
+							div.other-review-score
+								div.text-center.showscore #{username}
+							div.other-review-comment
+								div#comment.text-center.reviews(contenteditable="true") #{comment}
+							div.other-review-score
+								div#score.text-center.showscore(contenteditable="true") #{score}

@@ -1,0 +1,57 @@
+template(name='student')
+	div.achievements-container
+		div.col-md-6
+			div score
+		div.col-md-6
+			div score
+		each homeworks
+			div.col-md-3
+				if isEnd
+					div.panel.panel-gray
+						div.panel-heading
+							span 作业 #{index} : #{title}
+							span.label.label-default.pull-right end
+						div.panel-body
+							div.mask
+								div.mask-inner
+									div.show 分数 #{score}
+									div.show 班级排名 #{randInClass}
+									div.show 小组排名 #{randInGroup}
+							img(src="/img/cal.jpg")
+						div.panel-footer
+							a(href="{{url}}") 作业链接
+							a.pull-right(href="#") 源文件
+							a.pull-right(style="margin-right:20px" href="{{pathFor 'previousReview'}}") 查看评审
+				else if isPresent
+					div.panel.panel-primary
+						div.panel-heading
+							span 作业 #{index} : #{title}
+							span.label.label-info.pull-right present
+						div.panel-body
+							img(src="/img/unsubmit.jpg")
+						div.panel-footer
+							a(href="{{url}}") 作业链接
+							a.pull-right(href="{{pathFor 'studentReview'}}") 评审
+							a#submitHomework.pull-right(style="margin-right:20px" href="#") 提交作业
+				else if isImprove
+					div.panel.panel-info
+						div.panel-heading
+							span 作业 #{index} : #{title}
+							span.label.label-info.pull-right improve
+						div.panel-body
+							img(src="/img/cal.jpg") 				
+						div.panel-footer
+							a(href="{{url}}") 作业链接
+							a.pull-right(href="{{pathFor 'studentReview'}}") 评审
+							a#updateHomework.pull-right(style="margin-right:20px" href="#") 修改作业
+				else if isFuture
+					div.panel.panel-success
+						div.panel-heading
+							span 作业 #{index} : #{title}
+							span.label.label-success.pull-right future
+						div.panel-body
+							div.panel-content
+								p 作业开始提交时间:
+								p #{startTime}
+						div.panel-footer
+							a(href="{{url}}") 作业链接				

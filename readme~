@@ -1,0 +1,22 @@
+1)状态：还没有完全实现，没有实现文件上传，没有过实现TA检查；
+	已实现：管理员，教师和TA发布作业；学生查看历史成绩，学生互评
+2)预设帐号：
+	管理员：username: admin
+		password:123456
+	学生A：username: studentA
+	      password:123456
+	学生B:username: studentB
+	      password:123456
+	学生C:username: studetnC
+	      password:123456
+	学生D:username:studentD
+	      password:123456
+	老师：username:teacher
+	      password:123456
+	TA: username: ta
+	      passwrod:123456
+3）学生帐号说明：
+	studentA和studentB是1组， studentC和studentD是2组；这两组是互查的两组；
+4）作业提交说明：还没有实现文件上传，所以用confirm来代替实现了。
+3)运行：meteor运行
+      				

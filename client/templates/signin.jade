@@ -1,0 +1,16 @@
+template(name="signin")
+	div#login-main
+		div.bg
+			div.login-header
+				p.header-my My
+				p.header-am Achievements
+			form.main.form
+				div.input-filed
+					div.form-group
+						label(for="username") username
+						input.form-control(type="text" name="username" autofocus placeholder="Enter your username..." required) 
+					div.form-group
+						label(for="password") password
+						input.form-control(type="password" name="password" placeholder="Enter your password..." required)
+					div.login-btn
+						button.btn.btn-success.btn-login(type="submit") Log in
